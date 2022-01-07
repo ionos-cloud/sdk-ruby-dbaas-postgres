@@ -1,4 +1,7 @@
-[![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
+[![Gem Version](https://img.shields.io/gem/v/ionoscloud-dbaas-postgres)](https://rubygems.org/gems/ionoscloud-dbaas-postgres) 
+[![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
+
+![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
 
 # ionoscloud-dbaas-postgres
 
@@ -58,4 +61,4 @@ Include the Ruby code directly using `-I` as follows:
 ruby -Ilib script.rb
 ```
 
-## Our latest, most up to date documentation is available [here](https://github.com/ionos-cloud/sdk-ruby/blob/master/DOCS.md)
+## Our latest, most up to date documentation is available [here](https://docs.ionos.com/ruby-sdk-dbaas-postgres/)
