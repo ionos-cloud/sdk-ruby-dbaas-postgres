@@ -1,3 +1,4 @@
+![CI Ruby DBaaS Postgres](https://github.com/ionos-cloud/sdk-resources/workflows/[%20CI%20]%20DBaaS%20Postgres%20/%20Ruby/badge.svg)
 [![Gem Version](https://img.shields.io/gem/v/ionoscloud-dbaas-postgres)](https://rubygems.org/gems/ionoscloud-dbaas-postgres) 
 [![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
 
