@@ -12,6 +12,7 @@
 | **storage_type** | [**StorageType**](StorageType.md) |  |  |
 | **connections** | [**Array&lt;Connection&gt;**](Connection.md) |  |  |
 | **location** | [**Location**](Location.md) |  |  |
+| **backup_location** | [**BackupLocation**](BackupLocation.md) |  | [optional] |
 | **display_name** | **String** | The friendly name of your cluster. |  |
 | **maintenance_window** | [**MaintenanceWindow**](MaintenanceWindow.md) |  | [optional] |
 | **credentials** | [**DBUser**](DBUser.md) |  |  |
@@ -32,6 +33,7 @@ instance = IonoscloudDbaasPostgres::CreateClusterProperties.new(
   storage_type: null,
   connections: null,
   location: null,
+  backup_location: null,
   display_name: PostgreSQL cluster,
   maintenance_window: null,
   credentials: null,

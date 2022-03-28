@@ -35,9 +35,10 @@ end
 api_instance = IonoscloudDbaasPostgres::LogsApi.new
 cluster_id = 'cluster_id_example' # String | The unique ID of the cluster.
 opts = {
-  limit: 56, # Integer | The maximal number of log lines to return.
-  start: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start time for the query in RFC3339 format.
-  _end: Time.parse('2013-10-20T19:20:30+01:00') # Time | The end time for the query in RFC3339 format.
+  start: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago.
+  _end: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp.
+  direction: 'BACKWARD', # String | The direction in which to scan through the logs. The logs are returned in order of the direction.
+  limit: 56 # Integer | The maximal number of log lines to return.  If the limit is reached then log lines will be cut at the end (respecting the scan direction).
 }
 
 begin
@@ -72,9 +73,10 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **cluster_id** | **String** | The unique ID of the cluster. |  |
-| **limit** | **Integer** | The maximal number of log lines to return. | [optional] |
-| **start** | **Time** | The start time for the query in RFC3339 format. | [optional] |
-| **_end** | **Time** | The end time for the query in RFC3339 format. | [optional] |
+| **start** | **Time** | The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago. | [optional] |
+| **_end** | **Time** | The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp. | [optional] |
+| **direction** | **String** | The direction in which to scan through the logs. The logs are returned in order of the direction. | [optional][default to &#39;BACKWARD&#39;] |
+| **limit** | **Integer** | The maximal number of log lines to return.  If the limit is reached then log lines will be cut at the end (respecting the scan direction). | [optional][default to 100] |
 
 ### Return type
 

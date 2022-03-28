@@ -14,7 +14,7 @@
 require 'ionoscloud-dbaas-postgres'
 
 instance = IonoscloudDbaasPostgres::Connection.new(
-  datacenter_id: null,
+  datacenter_id: 5a029f4a-72e5-11ec-90d6-0242ac120003,
   lan_id: 2,
   cidr: 192.168.1.100/24
 )
