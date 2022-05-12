@@ -11,8 +11,8 @@
 | **storage_size** | **Integer** | The amount of storage per instance in megabytes. |  |
 | **storage_type** | [**StorageType**](StorageType.md) |  |  |
 | **connections** | [**Array&lt;Connection&gt;**](Connection.md) |  |  |
-| **location** | [**Location**](Location.md) |  |  |
-| **backup_location** | [**BackupLocation**](BackupLocation.md) |  | [optional] |
+| **location** | **String** | The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.  |  |
+| **backup_location** | **String** | The S3 location where the backups will be stored. | [optional] |
 | **display_name** | **String** | The friendly name of your cluster. |  |
 | **maintenance_window** | [**MaintenanceWindow**](MaintenanceWindow.md) |  | [optional] |
 | **credentials** | [**DBUser**](DBUser.md) |  |  |
@@ -32,8 +32,8 @@ instance = IonoscloudDbaasPostgres::CreateClusterProperties.new(
   storage_size: 5000,
   storage_type: null,
   connections: null,
-  location: null,
-  backup_location: null,
+  location: de/fra,
+  backup_location: de,
   display_name: PostgreSQL cluster,
   maintenance_window: null,
   credentials: null,

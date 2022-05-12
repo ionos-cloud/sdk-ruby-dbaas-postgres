@@ -17,6 +17,8 @@ module IonoscloudDbaasPostgres
   class StorageType
     HDD = "HDD".freeze
     SSD = "SSD".freeze
+    SSD_STANDARD = "SSD Standard".freeze
+    SSD_PREMIUM = "SSD Premium".freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

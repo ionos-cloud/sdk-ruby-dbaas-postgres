@@ -22,8 +22,10 @@ module IonoscloudDbaasPostgres
     # The PostgreSQL version of your cluster.
     attr_accessor :postgres_version
 
+    # The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation. 
     attr_accessor :location
 
+    # The S3 location where the backups will be stored.
     attr_accessor :backup_location
 
     # The total number of instances in the cluster (one master and n-1 standbys). 
@@ -74,8 +76,8 @@ module IonoscloudDbaasPostgres
       {
         :'display_name' => :'String',
         :'postgres_version' => :'String',
-        :'location' => :'Location',
-        :'backup_location' => :'BackupLocation',
+        :'location' => :'String',
+        :'backup_location' => :'String',
         :'instances' => :'Integer',
         :'ram' => :'Integer',
         :'cores' => :'Integer',

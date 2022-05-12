@@ -11,5 +11,5 @@ OpenAPI Generator version: 5.2.1-SNAPSHOT
 =end
 
 module IonoscloudDbaasPostgres
-  VERSION = '1.0.1'
+  VERSION = '1.0.2'
 end
