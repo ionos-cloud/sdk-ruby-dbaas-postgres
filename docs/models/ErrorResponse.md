@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **http_status** | **Integer** | HTTP status code of the operation | [optional] |
+| **http_status** | **Integer** | The HTTP status code of the operation. | [optional] |
 | **messages** | [**Array&lt;ErrorMessage&gt;**](ErrorMessage.md) |  | [optional] |
 
 ## Example
