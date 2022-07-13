@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.0.3 \(July, 2022\)
+
+### Features
+* Added size and location to ClusterBackup
+
 ## 1.0.2 \(May 12th, 2022\)
 
 ### Enhancements:
