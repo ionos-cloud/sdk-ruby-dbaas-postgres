@@ -1,7 +1,7 @@
 =begin
-#IONOS DBaaS REST API
+#IONOS DBaaS PostgreSQL REST API
 
-#An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
+#An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional PostgreSQL database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
 
 The version of the OpenAPI document: 1.0.0
 
@@ -271,7 +271,7 @@ module IonoscloudDbaasPostgres
     # Patch a cluster
     # Patch attributes of a PostgreSQL cluster.
     # @param cluster_id [String] The unique ID of the cluster.
-    # @param patch_cluster_request [PatchClusterRequest] The modified cluster.
+    # @param patch_cluster_request [PatchClusterRequest] Part of the cluster which should be modified.
     # @param [Hash] opts the optional parameters
     # @return [ClusterResponse]
     def clusters_patch(cluster_id, patch_cluster_request, opts = {})
@@ -282,7 +282,7 @@ module IonoscloudDbaasPostgres
     # Patch a cluster
     # Patch attributes of a PostgreSQL cluster.
     # @param cluster_id [String] The unique ID of the cluster.
-    # @param patch_cluster_request [PatchClusterRequest] The modified cluster.
+    # @param patch_cluster_request [PatchClusterRequest] Part of the cluster which should be modified.
     # @param [Hash] opts the optional parameters
     # @return [Array<(ClusterResponse, Integer, Hash)>] ClusterResponse data, response status code and response headers
     def clusters_patch_with_http_info(cluster_id, patch_cluster_request, opts = {})

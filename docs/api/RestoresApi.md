@@ -67,7 +67,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **cluster_id** | **String** | The unique ID of the cluster. |  |
-| **create_restore_request** | [**CreateRestoreRequest**](CreateRestoreRequest.md) | The restore request to create. |  |
+| **create_restore_request** | [**CreateRestoreRequest**](../models/CreateRestoreRequest.md) | The restore request to create. |  |
 
 ### Return type
 

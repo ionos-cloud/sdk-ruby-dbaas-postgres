@@ -68,7 +68,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**APIVersion**](APIVersion.md)
+[**APIVersion**](../models/APIVersion.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;APIVersion&gt;**](APIVersion.md)
+[**Array&lt;APIVersion&gt;**](../models/APIVersion.md)
 
 ### Authorization
 

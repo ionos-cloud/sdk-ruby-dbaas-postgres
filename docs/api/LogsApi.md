@@ -80,7 +80,7 @@ end
 
 ### Return type
 
-[**ClusterLogs**](ClusterLogs.md)
+[**ClusterLogs**](../models/ClusterLogs.md)
 
 ### Authorization
 

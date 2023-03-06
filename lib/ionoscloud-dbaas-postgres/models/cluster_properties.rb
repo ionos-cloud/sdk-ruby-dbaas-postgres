@@ -1,7 +1,7 @@
 =begin
-#IONOS DBaaS REST API
+#IONOS DBaaS PostgreSQL REST API
 
-#An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
+#An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional PostgreSQL database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
 
 The version of the OpenAPI document: 1.0.0
 
@@ -27,6 +27,10 @@ module IonoscloudDbaasPostgres
 
     # The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation. 
     attr_accessor :location
+
+
+    # The DNS name pointing to your cluster.
+    attr_accessor :dns_name
 
 
     # The S3 location where the backups will be stored.
@@ -70,6 +74,8 @@ module IonoscloudDbaasPostgres
 
         :'location' => :'location',
 
+        :'dns_name' => :'dnsName',
+
         :'backup_location' => :'backupLocation',
 
         :'instances' => :'instances',
@@ -105,6 +111,8 @@ module IonoscloudDbaasPostgres
 
         :'location' => :'String',
 
+        :'dns_name' => :'String',
+
         :'backup_location' => :'String',
 
         :'instances' => :'Integer',
@@ -129,6 +137,7 @@ module IonoscloudDbaasPostgres
     def self.openapi_nullable
       Set.new([
         
+
 
 
 
@@ -171,6 +180,11 @@ module IonoscloudDbaasPostgres
 
       if attributes.key?(:'location')
         self.location = attributes[:'location']
+      end
+
+
+      if attributes.key?(:'dns_name')
+        self.dns_name = attributes[:'dns_name']
       end
 
 
@@ -228,6 +242,7 @@ module IonoscloudDbaasPostgres
 
 
 
+
       if !@instances.nil? && @instances > 5
         invalid_properties.push('invalid value for "instances", must be smaller than or equal to 5.')
       end
@@ -278,6 +293,7 @@ module IonoscloudDbaasPostgres
 
 
 
+
       return false if !@instances.nil? && @instances > 5
       return false if !@instances.nil? && @instances < 1
 
@@ -297,6 +313,7 @@ module IonoscloudDbaasPostgres
     end
 
     
+
 
 
 
@@ -378,6 +395,7 @@ module IonoscloudDbaasPostgres
         display_name == o.display_name &&
         postgres_version == o.postgres_version &&
         location == o.location &&
+        dns_name == o.dns_name &&
         backup_location == o.backup_location &&
         instances == o.instances &&
         ram == o.ram &&
@@ -398,7 +416,7 @@ module IonoscloudDbaasPostgres
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [display_name, postgres_version, location, backup_location, instances, ram, cores, storage_size, storage_type, connections, maintenance_window, synchronization_mode].hash
+      [display_name, postgres_version, location, dns_name, backup_location, instances, ram, cores, storage_size, storage_type, connections, maintenance_window, synchronization_mode].hash
     end
 
     # Builds the object from hash

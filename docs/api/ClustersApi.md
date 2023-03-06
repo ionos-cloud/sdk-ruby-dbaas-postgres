@@ -76,7 +76,7 @@ end
 
 ### Return type
 
-[**PostgresVersionList**](PostgresVersionList.md)
+[**PostgresVersionList**](../models/PostgresVersionList.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ end
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ end
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ end
 
 ### Return type
 
-[**ClusterList**](ClusterList.md)
+[**ClusterList**](../models/ClusterList.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ end
 
 api_instance = IonoscloudDbaasPostgres::ClustersApi.new
 cluster_id = 'cluster_id_example' # String | The unique ID of the cluster.
-patch_cluster_request = IonoscloudDbaasPostgres::PatchClusterRequest.new # PatchClusterRequest | The modified cluster.
+patch_cluster_request = IonoscloudDbaasPostgres::PatchClusterRequest.new # PatchClusterRequest | Part of the cluster which should be modified.
 
 begin
   # Patch a cluster
@@ -376,11 +376,11 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **cluster_id** | **String** | The unique ID of the cluster. |  |
-| **patch_cluster_request** | [**PatchClusterRequest**](PatchClusterRequest.md) | The modified cluster. |  |
+| **patch_cluster_request** | [**PatchClusterRequest**](../models/PatchClusterRequest.md) | Part of the cluster which should be modified. |  |
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -451,11 +451,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **create_cluster_request** | [**CreateClusterRequest**](CreateClusterRequest.md) | The cluster to be created. |  |
+| **create_cluster_request** | [**CreateClusterRequest**](../models/CreateClusterRequest.md) | The cluster to be created. |  |
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PostgresVersionList**](PostgresVersionList.md)
+[**PostgresVersionList**](../models/PostgresVersionList.md)
 
 ### Authorization
 

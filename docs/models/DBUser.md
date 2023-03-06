@@ -14,7 +14,7 @@ require 'ionoscloud-dbaas-postgres'
 
 instance = IonoscloudDbaasPostgres::DBUser.new(
   username: db-admin,
-  password: password
+  password: password123
 )
 ```
 

@@ -72,7 +72,7 @@ end
 
 ### Return type
 
-[**ClusterBackupList**](ClusterBackupList.md)
+[**ClusterBackupList**](../models/ClusterBackupList.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ end
 
 ### Return type
 
-[**BackupResponse**](BackupResponse.md)
+[**BackupResponse**](../models/BackupResponse.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClusterBackupList**](ClusterBackupList.md)
+[**ClusterBackupList**](../models/ClusterBackupList.md)
 
 ### Authorization
 
