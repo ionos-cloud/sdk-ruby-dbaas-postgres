@@ -38,7 +38,7 @@ module IonoscloudDbaasPostgres
     # @option config [Configuration] Configuration for initializing the object, default to Configuration.default
     def initialize(config = Configuration.default)
       @config = config
-      @user_agent = "sdk-ruby-dbaas-postgres/v1.1.0"
+      @user_agent = "sdk-ruby-dbaas-postgres/v1.1.1"
       @default_headers = {
         'Content-Type' => 'application/json',
         'User-Agent' => @user_agent

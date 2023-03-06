@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module IonoscloudDbaasPostgres
-  # URLs to navigate the different pages. As of now we always only return a single page. 
+  # URLs to navigate the different pages. 
   class PaginationLinks
   
     # URL (with offset and limit parameters) of the previous page; only present if offset is greater than 0. 

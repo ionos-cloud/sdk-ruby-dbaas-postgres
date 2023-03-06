@@ -15,7 +15,7 @@
 require 'ionoscloud-dbaas-postgres'
 
 instance = IonoscloudDbaasPostgres::ClusterResponse.new(
-  type: null,
+  type: cluster,
   id: 498ae72f-411f-11eb-9d07-046c59cc737e,
   metadata: null,
   properties: null

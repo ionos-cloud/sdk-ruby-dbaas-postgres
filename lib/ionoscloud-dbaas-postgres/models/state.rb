@@ -18,6 +18,7 @@ module IonoscloudDbaasPostgres
     AVAILABLE = "AVAILABLE".freeze
     BUSY = "BUSY".freeze
     DESTROYING = "DESTROYING".freeze
+    DEGRADED = "DEGRADED".freeze
     FAILED = "FAILED".freeze
     UNKNOWN = "UNKNOWN".freeze
 

@@ -211,6 +211,8 @@ module IonoscloudDbaasPostgres
     # List clusters
     # Retrieves a list of PostgreSQL clusters.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (default to 100)
+    # @option opts [Integer] :offset The first element to return. Use together with &#39;limit&#39; for pagination. (default to 0)
     # @option opts [String] :filter_name Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field. 
     # @return [ClusterList]
     def clusters_get(opts = {})
@@ -221,17 +223,29 @@ module IonoscloudDbaasPostgres
     # List clusters
     # Retrieves a list of PostgreSQL clusters.
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination.
+    # @option opts [Integer] :offset The first element to return. Use together with &#39;limit&#39; for pagination.
     # @option opts [String] :filter_name Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field. 
     # @return [Array<(ClusterList, Integer, Hash)>] ClusterList data, response status code and response headers
     def clusters_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ClustersApi.clusters_get ...'
       end
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 1000
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling ClustersApi.clusters_get, must be smaller than or equal to 1000.'
+      end
+
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling ClustersApi.clusters_get, must be greater than or equal to 1.'
+      end
+
       # resource path
       local_var_path = '/clusters'
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'offset'] = opts[:'offset'] if !opts[:'offset'].nil?
       query_params[:'filter.name'] = opts[:'filter_name'] if !opts[:'filter_name'].nil?
 
       # header parameters

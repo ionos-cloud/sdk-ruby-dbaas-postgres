@@ -265,6 +265,8 @@ end
 
 api_instance = IonoscloudDbaasPostgres::ClustersApi.new
 opts = {
+  limit: 100, # Integer | The maximum number of elements to return. Use together with 'offset' for pagination.
+  offset: 200, # Integer | The first element to return. Use together with 'limit' for pagination.
   filter_name: 'filter_name_example' # String | Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the 'displayName' field. 
 }
 
@@ -299,6 +301,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **limit** | **Integer** | The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. | [optional][default to 100] |
+| **offset** | **Integer** | The first element to return. Use together with &#39;limit&#39; for pagination. | [optional][default to 0] |
 | **filter_name** | **String** | Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field.  | [optional] |
 
 ### Return type

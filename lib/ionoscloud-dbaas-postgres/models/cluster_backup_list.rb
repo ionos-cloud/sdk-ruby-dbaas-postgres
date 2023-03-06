@@ -27,15 +27,15 @@ module IonoscloudDbaasPostgres
     attr_accessor :items
 
 
-    # The offset specified in the request (if none was specified, the default offset is 0) (not implemented yet). 
+    # The offset specified in the request (if none was specified, the default offset is 0). 
     attr_accessor :offset
 
 
-    # The limit specified in the request (if none was specified, use the endpoint's default pagination limit) (not implemented yet, always return number of items). 
+    # The limit specified in the request (if none was specified, the default limit is 100). 
     attr_accessor :limit
 
 
-    attr_accessor :_links
+    attr_accessor :links
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -51,7 +51,7 @@ module IonoscloudDbaasPostgres
 
         :'limit' => :'limit',
 
-        :'_links' => :'_links'
+        :'links' => :'links'
       }
     end
 
@@ -74,7 +74,7 @@ module IonoscloudDbaasPostgres
 
         :'limit' => :'Integer',
 
-        :'_links' => :'PaginationLinks'
+        :'links' => :'PaginationLinks'
       }
     end
 
@@ -131,16 +131,20 @@ module IonoscloudDbaasPostgres
 
       if attributes.key?(:'offset')
         self.offset = attributes[:'offset']
+      else
+        self.offset = 0
       end
 
 
       if attributes.key?(:'limit')
         self.limit = attributes[:'limit']
+      else
+        self.limit = 100
       end
 
 
-      if attributes.key?(:'_links')
-        self._links = attributes[:'_links']
+      if attributes.key?(:'links')
+        self.links = attributes[:'links']
       end
     end
 
@@ -156,6 +160,10 @@ module IonoscloudDbaasPostgres
         invalid_properties.push('invalid value for "offset", must be greater than or equal to 0.')
       end
 
+
+      if !@limit.nil? && @limit > 1000
+        invalid_properties.push('invalid value for "limit", must be smaller than or equal to 1000.')
+      end
 
       if !@limit.nil? && @limit < 0
         invalid_properties.push('invalid value for "limit", must be greater than or equal to 0.')
@@ -174,6 +182,7 @@ module IonoscloudDbaasPostgres
 
       return false if !@offset.nil? && @offset < 0
 
+      return false if !@limit.nil? && @limit > 1000
       return false if !@limit.nil? && @limit < 0
 
       true
@@ -197,6 +206,10 @@ module IonoscloudDbaasPostgres
     # Custom attribute writer method with validation
     # @param [Object] limit Value to be assigned
     def limit=(limit)
+      if !limit.nil? && limit > 1000
+        fail ArgumentError, 'invalid value for "limit", must be smaller than or equal to 1000.'
+      end
+
       if !limit.nil? && limit < 0
         fail ArgumentError, 'invalid value for "limit", must be greater than or equal to 0.'
       end
@@ -215,7 +228,7 @@ module IonoscloudDbaasPostgres
         items == o.items &&
         offset == o.offset &&
         limit == o.limit &&
-        _links == o._links
+        links == o.links
     end
 
     # @see the `==` method
@@ -227,7 +240,7 @@ module IonoscloudDbaasPostgres
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [type, id, items, offset, limit, _links].hash
+      [type, id, items, offset, limit, links].hash
     end
 
     # Builds the object from hash

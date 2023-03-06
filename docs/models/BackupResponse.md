@@ -15,7 +15,7 @@
 require 'ionoscloud-dbaas-postgres'
 
 instance = IonoscloudDbaasPostgres::BackupResponse.new(
-  type: null,
+  type: backup,
   id: 498ae72f-411f-11eb-9d07-046c59cc737e,
   metadata: null,
   properties: null
